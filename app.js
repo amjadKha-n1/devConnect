@@ -11,9 +11,10 @@ const db = require("./data/database");
 const app = express();
 
 const store = new MongoDBStore({
-  uri: "mongodb://localhost:27017/devConnect",
+  uri: process.env.MONGODB_URI,
   collection: "sessions",
 });
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -25,7 +26,7 @@ app.use(express.static("public"));
 
 app.use(
   session({
-    secret: "some secret",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
