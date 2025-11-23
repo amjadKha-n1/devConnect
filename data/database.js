@@ -5,7 +5,11 @@ const MongoClient = mongodb.MongoClient;
 let database;
 
 async function connect () {
-    const client = await MongoClient.connect(process.env.MONGO_URL);
+    const mongoUri = process.env.MONGODB_URI;
+    if (!mongoUri) {
+        throw new Error("MONGODB_URI is not defined. Check your environment variables!");
+    }
+    const client = await MongoClient.connect(mongoUri);
     database = client.db();
 };
 
