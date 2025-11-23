@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/styles/shared.css">
+
+<article>
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+    <p>By <%= post.author.name %> (<%= email %>)</p>
+
+    <div id="btn">
+        <form action="/posts/<%= post._id %>/delete" method="POST">
+            <button>Delete Post</button>
+        </form>
+        <a href="/posts/<%= post._id %>/edit">Edit Post</a>
+    </div>
+</article>

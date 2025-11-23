@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/styles/signup.css" />
+<section id="main">
+  <form action="/signup" method="POST">
+    <label for="username">Name</label>
+    <input
+      type="text"
+      id="username"
+      name="name"
+      minlength="6"
+      maxlength="30"
+      placeholder="Amjad Khan"
+      required
+    />
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" required />
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required />
+
+    <button id="signup">Sign Up</button>
+
+    <p id="paragraph">Already have an account? <a href="/login" id="paragraph-a">Log in</a></p>
+    <p style="font-size: 2rem;">or</p>
+
+    <button id="button">
+      <img
+        width="28"
+        height="28"
+        src="https://img.icons8.com/fluency/48/google-logo.png"
+        alt="google-logo"
+      />
+      Sign up with google
+    </button>
+  </form>
+</section>

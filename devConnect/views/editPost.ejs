@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/styles/signup.css" />
+<div>
+    <form action="/posts/<%= post._id %>/edit" method="POST">
+
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="<%= post.title %>" required>
+
+        <label for="content">Content</label>
+        <input type="text" id="content" name="content" value="<%= post.content %>" required maxlength="255">
+
+        <button>Submit</button>
+    </form>
+</div>

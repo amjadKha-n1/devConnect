@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(242, 230, 230);
+}
+h1 {
+    text-align: center;
+}
+#main-data {
+    text-align: center;
+}
+#main-data ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 1rem;
+    padding: 0;
+    text-align: center;
+}
+#main-data li {
+    list-style-type: none;
+    background-color: rgba(245, 200, 200, 0.427);
+    width: auto;
+}
+#main-data a:hover {
+    text-decoration: none;
+}
+
+article {
+    text-align: center;
+    font-size: 1.5rem;
+}
+form button {
+    border-radius: 1rem;
+    padding: 0.4rem;
+    background-color: rgba(229, 220, 220, 0.427);
+}
+form button:hover {
+    background-color: rgba(170, 164, 164, 0.427);
+    cursor: pointer;
+}
+article a {
+    text-decoration: none;
+}
+article a:hover {
+    text-decoration: none;
+    color: rgb(74, 194, 234);
+}
+#btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem 0;
+}
+#footer {
+    position: relative;
+    text-align: center;
+    padding: 3rem;
+    
+}
